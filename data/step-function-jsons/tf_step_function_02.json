@@ -1,0 +1,15 @@
+{
+  "Comment": "State Machine Example",
+  "StartAt": "Start",
+  "States": {
+    "Start": {
+      "Type": "Task",
+      "Resource": "arn:aws:lambda:${region}:${aws_account_id}:function:tf_lambda_function_02",
+      "Next": "End"
+    },
+    "End": {
+      "Type": "Pass",
+      "End": true
+    }
+  }
+}

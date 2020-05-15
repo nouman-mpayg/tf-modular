@@ -1,0 +1,13 @@
+Metadata-Version: 1.0
+Name: mpayg-iot
+Version: 0.1
+Summary: M-PAYG's IoT related packages
+Home-page: UNKNOWN
+Author: Kashif Masood
+Author-email: v-kashif@mpayg.com
+License: Proprietary
+Description: README
+        
+        M-PAYG IoT related python 3 packages
+        
+Platform: UNKNOWN

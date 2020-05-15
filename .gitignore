@@ -1,0 +1,17 @@
+secrets.tf
+secrets.yaml
+.terraform
+**.tfstate*
+*.zip
+*.plan
+.DS_Store
+.idea
+**.pyc
+__pycache__
+secrets_backup.json
+.coverage
+**nodeids
+**lastfailed
+codebuild_build.sh
+build.txt
+.vscode
