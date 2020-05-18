@@ -1,5 +1,5 @@
 data "template_file" "sfn_file" {
-  template = "${file("/Users/adeel/Desktop/mpayg-learning/terraform-modular/services/data/step-function-jsons/${var.sfn_name}.json")}"
+  template = "${file("*/services/data/step-function-jsons/${var.sfn_name}.json")}"
 
   vars = {
     region                  = "${var.region}"

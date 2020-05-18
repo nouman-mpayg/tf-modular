@@ -1,0 +1,11 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - nohup dockerd --host=unix:///var/run/docker.sock --storage-driver=overlay&
+  build:
+    commands:
+      - terraform init
+      - terraform plan
+      - terraform apply
