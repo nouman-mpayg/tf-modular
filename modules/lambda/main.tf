@@ -78,8 +78,8 @@ resource "null_resource" "pip_install" {
 
     command = <<EOF
       pip3 install \
-      -t ${var.absolute_path}/data/raw-lambdas/${var.func_name}/vendors \
-      -r ${var.absolute_path}/data/raw-lambdas/${var.func_name}/requirements.txt --upgrade \
+      -t ${path.root}/data/raw-lambdas/${var.func_name}/vendors \
+      -r ${path.root}/data/raw-lambdas/${var.func_name}/requirements.txt --upgrade \
       $(pip3 install --system 2> /dev/null; if [ $? == 0 ] ; then echo --system; fi) \
     EOF
   }
