@@ -46,4 +46,7 @@ resource "aws_sfn_state_machine" "sfn" {
   name       = "${var.sfn_name}"
   role_arn = "${aws_iam_role.stf_role.arn}"
   definition = "${data.template_file.sfn_file.rendered}"
+  depends_on = [
+    "aws_lambda_function.lambda_function",
+  ]
 }

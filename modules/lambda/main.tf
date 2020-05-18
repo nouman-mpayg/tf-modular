@@ -105,7 +105,9 @@ resource "aws_lambda_function" "lambda_function" {
   handler       = "${var.func_name}.handler"
   runtime       = "${var.runtime}"
   timeout       = "${var.timeout}"
-
+  depends_on = [
+      "archive_file.make_zip",
+    ]
   environment = {
     variables = "${var.env}"
   }
